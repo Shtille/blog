@@ -1,8 +1,8 @@
 # Site Build Settings
 
-title: 'Shtille's blog
-description: 'A development blog'
-author: 'Shtille'
+title: "Shtille's blog"
+description: "A development blog"
+author: "Shtille"
 
 # Jekyll-paginate-v2 configuration
 #  pagination:
