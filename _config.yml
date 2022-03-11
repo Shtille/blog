@@ -31,3 +31,6 @@ plugins: [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
 exclude:
   - LICENSE
   - README.md
+
+# Site specific settings
+hide_related_posts: true
