@@ -48,6 +48,7 @@ set(my_sources ${my_sources} fourth.cpp)
 List of useful prebuilt variables:
 - *CMAKE_CURRENT_SOURCE_DIR*
 - *CMAKE_CURRENT_BINARY_DIR*
+
 #### Setting C++ standard version
 ```cmake
 set(CMAKE_CXX_STANDARD 11)
@@ -202,4 +203,24 @@ endforeach(DIR)
 cd <project directory>
 cmake -S . -B build
 cmake --build build
+```
+To specify the build configuration use:
+```bash
+cmake --build build --config Release
+````
+Read [the manual](https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html) for more information about configurations.
+#### Cleaning up
+```bash
+cmake --build build --target clean
+```
+#### Installing
+Use following command in your *CMakeLists.txt* file:
+```cmake
+install(TARGETS AtmosphericScattering Shadows
+        CONFIGURATIONS Release
+        RUNTIME DESTINATION ${BINARY_PATH})
+```
+To install call following cmake command:
+```bash
+cmake --install build --config Release
 ```
