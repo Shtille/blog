@@ -48,6 +48,10 @@ set(my_sources ${my_sources} fourth.cpp)
 List of useful prebuilt variables:
 - *CMAKE_CURRENT_SOURCE_DIR*
 - *CMAKE_CURRENT_BINARY_DIR*
+#### Setting C++ standard version
+```cmake
+set(CMAKE_CXX_STANDARD 11)
+```
 
 ### Project structure
 You need to create CMakeLists.txt file in each directory you have target and intermediate files for easy build, including root file.
@@ -142,6 +146,12 @@ target_link_libraries(${PROJECT_NAME} PUBLIC ${libraries})
 after target (executable, library) was specified.
 In new versions of CMake you may not set specific order of libraries to correct the linkage, also CMake automatically collects all the required libraries between subprojects.
 The more information about link function read at [its manual](https://cmake.org/cmake/help/latest/command/target_link_libraries.html).
+#### Link to Mac OS X / iOS frameworks
+```cmake
+project(my_lib)
+...
+target_link_libraries(${PROJECT_NAME} PUBLIC "-framework Cocoa")
+```
 
 ### Include directories
 Similar way handled include directories:
@@ -185,4 +195,11 @@ foreach(DIR ${MODULE_DIRS})
   file(GLOB DIR_SOURCE ${CMAKE_CURRENT_SOURCE_DIR}/${DIR}/*.c ${CMAKE_CURRENT_SOURCE_DIR}/${DIR}/*.cpp)
   set(MODULE_SOURCES ${MODULE_SOURCES} ${DIR_SOURCE})
 endforeach(DIR)
+```
+
+### Building the code
+```bash
+cd <project directory>
+cmake -S . -B build
+cmake --build build
 ```
