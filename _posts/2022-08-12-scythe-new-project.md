@@ -33,7 +33,8 @@ cp deps/scythe/src/example/desktop.cpp src/
 rsync -avz deps/scythe/data/ ./data
 ```
 5. Create CMakeLists.txt build file.
-```cmake
+
+```
 cmake_minimum_required(VERSION 3.13 FATAL_ERROR)
 
 # Some settings
@@ -78,6 +79,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE ${libraries})
 install(TARGETS ${PROJECT_NAME}
 		RUNTIME DESTINATION ${BINARY_PATH})
 ```
+
 6. Build and install project with CMake.
 ```bash
 mkdir build
