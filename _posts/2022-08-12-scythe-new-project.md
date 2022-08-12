@@ -34,7 +34,7 @@ rsync -avz deps/scythe/data/ ./data
 ```
 5. Create CMake build file.
 Create file CMakeLists.txt with the following content:
-```cmake
+```bash
 cmake_minimum_required(VERSION 3.13 FATAL_ERROR)
 
 # Some settings
