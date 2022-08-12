@@ -32,9 +32,8 @@ cp deps/scythe/src/example/desktop.cpp src/
 ```bash
 rsync -avz deps/scythe/data/ ./data
 ```
-5. Create CMake build file.
-Create file CMakeLists.txt with the following content:
-```bash
+5. Create CMakeLists.txt build file.
+```cmake
 cmake_minimum_required(VERSION 3.13 FATAL_ERROR)
 
 # Some settings
