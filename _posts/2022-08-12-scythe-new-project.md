@@ -9,7 +9,9 @@ tags: [C++,samples]
 
 The following guide will describe how to make a new project based on scythe™ framework.
 
----
+## Project configuration
+
+### Project initialization
 
 1. Initialize the project with git.
 ```bash
@@ -32,7 +34,11 @@ cp deps/scythe/src/example/desktop.cpp src/
 ```bash
 rsync -avz deps/scythe/data/ ./data
 ```
-5. Create CMakeLists.txt build file.
+
+### Project build
+
+1. Create CMakeLists.txt build file.
+
 ```
 cmake_minimum_required(VERSION 3.13 FATAL_ERROR)
 
@@ -78,7 +84,9 @@ target_link_libraries(${PROJECT_NAME} PRIVATE ${libraries})
 install(TARGETS ${PROJECT_NAME}
 		RUNTIME DESTINATION ${BINARY_PATH})
 ```
-6. Build and install project with CMake.
+
+2. Build and install project with CMake.
+
 ```bash
 mkdir build
 cd build
@@ -87,7 +95,9 @@ cd ..
 cmake --build build
 cmake --install build
 ```
+
 7. Run your application.
+
 ```bash
 ./bin/Demo
 ```
