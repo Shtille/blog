@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ESO DoTs comparison"
+title: "ESO DoTs comparison program"
 author: "Shtille"
 categories: journal
 tags: [C++,samples,ESO]
@@ -169,3 +169,4 @@ We placed initially skills in the perfect order of DPS descendance
 
 - We should use inheritance to describe the skills because of the different behaviour.
 - Make large list of skills and sort it in DPS descendance order.
+- Try different base skill (spammable) and compare results.
