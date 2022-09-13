@@ -37,7 +37,7 @@ But the lower mipmap level is, the bigger becomes artefacts on the edges. This w
 
 I found the way to generate both of these maps, based on some cubemap texture. Here's the result with proper maps:
 
-<img src="{{ '/assets/img/SS.2017.12.24.15.15.52' | relative_url }}">
+<img src="{{ '/assets/img/SS.2017.12.24.15.15.52.jpg' | relative_url }}">
 
 As you may see, it's rather similar to the reference image.
 This is the result I've decided to end with.
