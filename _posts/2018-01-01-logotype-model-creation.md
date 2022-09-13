@@ -105,7 +105,7 @@ Then move it to a proper position:
 
 Do the same with sphere and close the ends:
 
-<img src="{{ '/assets/img/logo-7.PNG' | relative_url }}">
+<img src="{{ '/assets/img/logo-7.png' | relative_url }}">
 
 Now we can make the "eye". It's defined by arc with length equal to $R$. And it should be two times wider than original torus. Lets call it $H$:
 
@@ -115,11 +115,11 @@ $$ \left\{ \begin{array}{ll} R_e = \frac{R}{2} \\ \alpha = 2 \cdot atan(\frac{1}
 
 Now we're able to create a inner torus:
 
-<img src="{{ '/assets/img/logo-8.PNG' | relative_url }}">
+<img src="{{ '/assets/img/logo-8.png' | relative_url }}">
 
 After all object is placed and attached together:
 
-<img src="{{ '/assets/img/logo-9.PNG' | relative_url }}">
+<img src="{{ '/assets/img/logo-9.png' | relative_url }}">
 
 Now I can use this model for rendering in my framework:
 
