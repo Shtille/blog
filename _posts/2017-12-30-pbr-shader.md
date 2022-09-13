@@ -3,7 +3,7 @@ layout: post
 title: "Physical based rendering shader"
 author: "Shtille"
 categories: journal
-tags: [thoughts,physics,bullet]
+tags: [thoughts,GLSL]
 image: greasy-pan-2-preview.png
 ---
 
