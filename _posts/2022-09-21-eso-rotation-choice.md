@@ -13,6 +13,7 @@ tags: [ESO,math]
 Rotation is sequence of used skills. We are interested in choosing the best skill rotation to achive the maximum damage per second (DPS), and kill target as fast as possible. Thus we take following assumptions:
 - we ignore light attack weaving, since it has no influence on rotation
 - we ignore the fact if skill crits or not
+
 All math will be common, but class skills will be used for templar.
 
 ### Base mechanics
@@ -39,12 +40,12 @@ Most of dot skills (or simply dots) have duration above 10 seconds, thus we need
 
 1. Instant damage skill.
 2. Damage over time skill.
-	2.1. Damage tick every X second.
-	2.2. Damage is over duration.
-	2.3. Combined.
+	* Damage tick every X second.
+	* Damage is over duration.
+	* Combined.
 3. Skill with cast time.
-	3.1. Cast time is less than second.
-	3.2. Cast time is greater than second.
+	* Cast time is less than second.
+	* Cast time is greater than second.
 
 ### Types of skills amplification
 
@@ -249,9 +250,7 @@ To find the best spammable skill we should sort array of skills by condition abo
 
 Mostly spammable skills will have 1 second duration.
 
-As we do our rotation for stamina templar mainly, we choose skill "Biting Jabs" as melee stamina skill with highest dps.
-
-## Determine is dot worthy usage
+## Determine if dot worthy usage
 
 Let's assume we have system of two skills $(D_1, T_1)$, $(D_2, T_2)$. So denote:
 
@@ -486,6 +485,7 @@ $$ f_0 \le \left(\frac{1+K}{K} - \frac{R_1}{R_2}\cdot\frac{1}{K}\right)\cdot\fra
 $$ f_0 \le \left(\frac{1+K}{K} - \frac{D_1}{D_2}\cdot\frac{T_2}{T_1}\cdot\frac{1}{K}\right)\cdot\frac{x_t}{x_0} \tag{9} $$
 
 So $f_0$ is desired fraction of enemy's health.
+From enemy's health fraction $f = f_0$ and below ordinary spammable usage is worthless.
 
 ### When to get rid of using dots
 
@@ -521,7 +521,7 @@ $$
 f \le f_0 = \frac{1}{K} \cdot \frac{x_t}{x_0} \cdot \left(1+K - \frac{D_2 T_1}{D_1 C_2}\right) \tag{10}
 $$
 
-So from enemy's health fraction $f = f_0$ and below ordinary spammable usage is worthless.
+So from enemy's health fraction $f = f_0$ and below dot usage is worthless.
 
 ## Conclusion
 
