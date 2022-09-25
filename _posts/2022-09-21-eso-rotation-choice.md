@@ -178,43 +178,39 @@ R_0, & \text{$x \in [x_t,x_0]$}
 \end{cases}
 $$
 
-The summary dps will have following formula:
+Average dps $R_s = \overline{R}$ can be calculated as:
 
-$$ D_s = \int_{0}^{t_0}R(t)dt $$
-
-Average dps $R_c$ can be calculated as:
-
-$$ R_c = \frac{\int_{0}^{t_0}R(t)dt}{\int_{0}^{t_0}dt} $$
+$$ R_s = \frac{1}{t_0} \cdot \int_{0}^{t_0}R(t)dt $$
 
 But it can be also calculated as:
 
-$$ R_c = \frac{\int_{0}^{x_0}R(x)dx}{\int_{0}^{x_0}dx} $$
+$$ R_s = \frac{1}{x_0} \cdot \int_{0}^{x_0}R(x)dx $$
 
 Divide it into two intervals:
 
 $$
-R_c = \frac{\int_{0}^{x_t}R(x)dx + \int_{x_t}^{x_0}R(x)dx}{\int_{0}^{x_0}dx}
+R_s x_0 = \int_{0}^{x_t}R(x)dx + \int_{x_t}^{x_0}R(x)dx
 $$
 
 $$
-R_c x\rvert_{0}^{x_0} = \int_{0}^{x_t}R_0 (1+K-K x/x_t)dx + \int_{x_t}^{x_0}R_0 dx
+R_s x_0 = \int_{0}^{x_t}R_0 (1+K-K x/x_t)dx + \int_{x_t}^{x_0}R_0 dx
 $$
 
 $$
-R_c x_0 = \left.R_{0}(1+K)x\right\rvert_{0}^{x_t} 
+R_s x_0 = \left.R_{0}(1+K)x\right\rvert_{0}^{x_t} 
 - \left.\frac{R_0 K}{2 x_t}x^2\right\rvert_{0}^{x_t} 
 + \left.R_0 x\right\rvert_{x_t}^{x_0}
 $$
 
 $$
-R_c x_0 = R_0 (1+K) x_t - \frac{1}{2} R_0 K x_t + R_0 x_0 - R_0 x_t
+R_s x_0 = R_0 (1+K) x_t - \frac{1}{2} R_0 K x_t + R_0 x_0 - R_0 x_t
 $$
 
-$$ R_c x_0 = \frac{1}{2} R_0 K x_t + R_0 x_0 $$
+$$ R_s x_0 = \frac{1}{2} R_0 K x_t + R_0 x_0 $$
 
-$$ R_c = \frac{1}{2} R_0 K \left(\frac{x_t}{x_0}\right) + R_0 $$
+$$ R_s = \frac{1}{2} R_0 K \left(\frac{x_t}{x_0}\right) + R_0 $$
 
-$$ R_c = R_0 \left(\frac{1}{2} K \frac{x_t}{x_0} + 1\right) \tag{3}\label{3} $$
+$$ R_s = R_0 \left(\frac{1}{2} K \frac{x_t}{x_0} + 1\right) \tag{3}\label{3} $$
 
 ## Choosing the spammable skill
 
