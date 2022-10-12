@@ -8,7 +8,7 @@ tags: [code,JavaScript]
 
 We need compare two methods of map enumeration:
 - via _forEach_ method
-- via _keys_
+- via _entries_ enumeration
 
 Code setup will be:
 ```js
@@ -29,11 +29,9 @@ m.forEach(function(value){
 The second case:
 ```js
 var x = 0;
-var key,value;
-for (key in m) {
-	value = m[key];
+for (const [key,value] of m.entries()) {
 	x += value;
 }
 ```
 
-According to [benchmark site](https://jsbench.me/) the first one is 94.99% _slower_. So the second one is ~20 times faster.
+According to [benchmark site](https://jsbench.me/) the second one is 58.62% _slower_. This is kinda strange.
