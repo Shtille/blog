@@ -15,6 +15,8 @@ I've made a function to replace _Map_ keys with specific pattern defined by anot
  * @param {Map} map  The replace map. Contains (old key, new key) pairs.
  */
 Map.prototype.replaceKeys = function(map) {
+	if (map.size == 0)
+		return;
 	let newMap = new Map();
 	// At first add changed items
 	map.forEach(function(newKey, oldKey){
