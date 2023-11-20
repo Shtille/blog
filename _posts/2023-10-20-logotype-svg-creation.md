@@ -36,29 +36,43 @@ Mozilla has an excellent [SVG format description](https://developer.mozilla.org/
 We will use only following commands:
 - MoveTo: M
 - Elliptical Arc Curve: a
+
 See [d attribute description](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/d) for command details.
 
 ## Full logotype definition
 
 $$ M x_0,y_0+(R-r) $$
+
 $$ a (R-r),(R-r) 0 0 1 0,(2r-2R) $$
+
 $$ r,r 0 0 0 0,-2r $$
+
 $$ (R+r),(R+r) 0 0 0 0,2(R+r) $$
+
 $$ M (x_0-R\frac{\sqrt{3}}{2}),(y_0-R\frac{1}{2}+r) $$
+
 $$ a (R-r),(R-r) 0 0 1 0,(2R-2r) $$
+
 $$ r,r 0 0 0 0,2r $$
+
 $$ (R+r),(R+r) 0 0 0 0,-2(R+r) $$
+
 $$ M (x_0-r\frac{\sqrt{3}}{2}),(y_0+r\frac{1}{2}) $$
+
 $$ a \frac{R}{2},\frac{R}{2} 0 0 0 -R\frac{4}{5}\frac{\sqrt{3}}{2},R\frac{4}{5}\frac{1}{2} $$
+
 $$ \frac{R}{2},\frac{R}{2} 0 0 0 R\frac{4}{5}\frac{\sqrt{3}}{2},-R\frac{4}{5}\frac{1}{2} $$
 
 where $$ (x_0,y_0) $$ is the start position of our equations (first torus' center).
 
 The logotype center position will be:
+
 $$ x_c = x_0 - r\frac{\sqrt{3}}{2} - R\frac{2}{5}\frac{\sqrt{3}}{2} $$
+
 $$ y_c = y_0 + r\frac{1}{2} + R\frac{2}{5}\frac{1}{2} $$
 
 Let's determine maximum distance from center to edge _d_:
+
 $$ d = y_c - y_min = r\frac{3}{2} + R\frac{6}{5} $$
 
 And viewport will be: $$ (x_c-d, y_c-d, 2d, 2d) $$
