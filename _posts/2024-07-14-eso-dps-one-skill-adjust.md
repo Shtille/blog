@@ -101,12 +101,13 @@ $$ R_b = K f R_a + (1-f) R_a $$
 $$ \frac{R_b}{R_a}=1+(K-1)f \tag{3}\label{3} $$
 
 There are two cases:
+
 1) Skill damage increases, $K>1$
 2) Skill damage decreases, $K<1$
 
 ## Our practical research
 
-As we get from PTS (public test server) patch notes, the arcanist skill [https://eso-hub.com/en/skills/arcanist/herald-of-the-tome/cephaliarchs-flail](Cephaliarch's Flail) will lose execute capability after game update 43.
+As we get from PTS (public test server) patch notes, the arcanist skill [Cephaliarch's Flail](https://eso-hub.com/en/skills/arcanist/herald-of-the-tome/cephaliarchs-flail) will lose execute capability after game update 43.
 
 ### Skill DPS change calculation
 
@@ -129,7 +130,7 @@ $$ K=\frac{4}{5} \tag{4}\label{4} $$
 
 ### Summary DPS change calculation
 
-According to typical arcanist parsers, [https://eso-hub.com/en/skills/arcanist/herald-of-the-tome/cephaliarchs-flail](Cephaliarch's Flail) has *7.6%* of total damage output, so $f$ will be:
+According to typical arcanist parsers, [Cephaliarch's Flail](https://eso-hub.com/en/skills/arcanist/herald-of-the-tome/cephaliarchs-flail) has *7.6%* of total damage output, so $f$ will be:
 
 $$ f=0.076 \tag{5}\label{5} $$
 
