@@ -26,8 +26,11 @@ $X_i$ will be the amount of damage caused by a separate _i_-th source.
 $R_i$ will be DPS of a separate _i_-th source.
 
 $$ X=\sum_{i=1}^{N} X_i $$
+
 $$ X_i=R_i T_a $$
+
 $$ X=\sum_{i=1}^{N} R_i T_a = T_a \sum_{i=1}^{N} R_i $$
+
 $$ R_a=\sum_{i=1}^{N} R_i $$
 
 Let's assume that our changing skill has index 1, so:
@@ -37,6 +40,7 @@ $$ R_a=R_1 + \sum_{i=2}^{N} R_i $$
 Let's denote that summ as $R_s$:
 
 $$ R_s=\sum_{i=2}^{N} R_i $$
+
 $$ R_a=R_1+R_s $$
 
 ### Target scenario
@@ -45,8 +49,11 @@ DPS of a single skill (we've chosen it as the first skill) changes.
 Time required to kill dummy target changes to $T_b$.
 
 $$ X=\sum_{i=1}^{N} Y_i $$
+
 $$ Y_i=R_{i}^{*} T_b $$
+
 $$ X=\sum_{i=1}^{N} R_{i}^{*} T_b = T_b \sum_{i=1}^{N} R_{i}^{*} $$
+
 $$ R_b=\sum_{i=1}^{N} R_{i}^{*} $$
 
 As we set peviously, only first skill DPS changes, so:
@@ -65,7 +72,7 @@ So our formula will be:
 
 $$
 \begin{cases}
-R_a = R_1 + R_s
+R_a = R_1 + R_s \\
 R_b = K R_1 + R_s
 \end{cases} \tag{1}\label{1}
 $$
@@ -77,10 +84,12 @@ $$ \frac{X_i}{X}=\frac{R_i}{R_a}=f_i $$
 We need only the first (changing) skill fractional part contribution $f$:
 
 $$ \frac{R_1}{R_a}=f $$
+
 $$ \frac{R_s}{R_a}=1-f $$
+
 $$
 \begin{cases}
-R_1=f R_a
+R_1=f R_a \\
 R_s=(1-f) R_a
 \end{cases} \tag{2}\label{2}
 $$
@@ -88,6 +97,7 @@ $$
 Push results into the $\eqref{1}$:
 
 $$ R_b = K f R_a + (1-f) R_a $$
+
 $$ \frac{R_b}{R_a}=1+(K-1)f \tag{3}\label{3} $$
 
 There are two cases:
@@ -114,6 +124,7 @@ $$ D_{exec} = D \frac{n}{2} + \frac{3}{2} D \frac{n}{2} = \frac{5}{4} D n $$
 As in upcoming update there will be no execute component, DPS change will be
 
 $$ \frac{D_2}{D_1}=\frac{D_{base}}{D_{exec}}=\frac{4}{5} $$
+
 $$ K=\frac{4}{5} \tag{4}\label{4} $$
 
 ### Summary DPS change calculation
