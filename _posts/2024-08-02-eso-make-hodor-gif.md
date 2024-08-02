@@ -14,7 +14,7 @@ Once I've decided to make an animated avatar for ESO's Hodor Reflexes Add-on.
 The avatar requirements are:
 - size 32x32
 - no more than 50 frames
-- format .gif or .dds (Direct Draw Surface)
+- sprite sheet in .dds format
 
 ## The process
 
@@ -133,7 +133,7 @@ Then remove background for each frame in GIMP editor.
 
 ### Consolidate frames
 
-Next we gonna fill missing as they were before unique frames isolation.
+Next we gonna fill missing frames as they were before unique frames isolation.
 Note that stand key frames have 6 frames gap to the next unique frame instead of regular 4 frames.
 
 ```py
@@ -212,15 +212,20 @@ The result will be:
 
 <img src="{{ '/assets/img/avatar/smb_avatar32.gif' | relative_url }}">
 
-### Convert GIF to DDS
+### Convert GIF to DDS sprite sheet
 
-The easiest solution would be using ImageMagick:
+The easiest solution would be using *ImageMagick*:
 
 ```bash
 magick -format dds -define dds:compression=none avatar32.gif avatar32.dds
 ```
 
 But the result is just one image, not the series of sprites. And here comes the internet solution: [ezgif](https://ezgif.com/gif-to-sprite).
+The spite sheet will be:
+
+<img src="{{ '/assets/img/avatar/smb_avatar32_map.png' | relative_url }}">
+
+And finally we can convert the sprite sheet to desired DDS format via *ImageMagick*.
 
 ## Consclusion
 
