@@ -111,7 +111,7 @@ $$
 
 ### Data creation code
 
-Full data cration code is following:
+Full data creation code is following:
 
 ```cpp
 bool PolylineDrawer::CreateData()
