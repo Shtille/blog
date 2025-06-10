@@ -242,8 +242,6 @@ uniform mat4 u_model;
 uniform vec4 u_viewport;
 uniform float u_width;
 
-//out vec2 v_texcoord;
-
 vec2 project(vec4 clip)
 {
     vec3 ndc = clip.xyz / clip.w;
@@ -268,7 +266,7 @@ void main()
     vec2 prev = project(clip_prev);
     vec2 next = project(clip_next);
 
-    vec2 direction = normalize(next - prev); // better do it on local space
+    vec2 direction = normalize(next - prev);
     vec2 normal = vec2(-direction.y, direction.x);
 
     float w = u_width * 0.5;
@@ -287,7 +285,6 @@ Fragment shader:
 uniform vec4 u_color;
 
 out vec4 color;
-//in vec2 v_texcoord;
 
 void main()
 {
