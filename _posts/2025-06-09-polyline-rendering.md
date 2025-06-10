@@ -80,16 +80,16 @@ $$
 \end{cases} \tag{1}\label{1}
 $$
 
-The direction should be the same for all vertices.
+The direction should be the same for all vertices of a single quad.
 I came up with an idea that *if we sum up two vectors: from vertex before current by two vertices to current vertex and from current vertex to vertex after current by two vertices, we get the invariant value across all vertices of quad*.
 
 According to memory layout $\eqref{1}$, the direction vectors for *i*-th quad will be calculated as:
 
 $$
 \begin{cases}
-d_0 = (P_{i} - P_{i}) + (P_{i+1} - P_{i}) = P_{i+1} - P_{i}
-d_1 = (P_{i} - P_{i}) + (P_{i+1} - P_{i}) = P_{i+1} - P_{i}
-d_2 = (P_{i+1} - P_{i}) + (P_{i+1} - P_{i+1}) = P_{i+1} - P_{i}
+d_0 = (P_{i} - P_{i}) + (P_{i+1} - P_{i}) = P_{i+1} - P_{i} \\
+d_1 = (P_{i} - P_{i}) + (P_{i+1} - P_{i}) = P_{i+1} - P_{i} \\
+d_2 = (P_{i+1} - P_{i}) + (P_{i+1} - P_{i+1}) = P_{i+1} - P_{i} \\
 d_3 = (P_{i+1} - P_{i}) + (P_{i+1} - P_{i+1}) = P_{i+1} - P_{i}
 \end{cases} \tag{2}\label{2}
 $$
@@ -102,11 +102,11 @@ From equation $\eqref{2}$ direction vectors for this quad will be calculated as:
 
 $$
 \begin{cases}
-d_0 = (P_1 - P_1) + (P_2 - P_1) = P_2 - P_1
-d_1 = (P_1 - P_1) + (P_2 - P_1) = P_2 - P_1
-d_2 = (P_2 - P_1) + (P_2 - P_2) = P_2 - P_1
+d_0 = (P_1 - P_1) + (P_2 - P_1) = P_2 - P_1 \\
+d_1 = (P_1 - P_1) + (P_2 - P_1) = P_2 - P_1 \\
+d_2 = (P_2 - P_1) + (P_2 - P_2) = P_2 - P_1 \\
 d_3 = (P_2 - P_1) + (P_2 - P_2) = P_2 - P_1
-\end{cases} \tag{2}\label{2}
+\end{cases}
 $$
 
 ### Data creation code
@@ -297,5 +297,5 @@ void main()
 
 ## Conclusion
 
-We achieved screeen space based base version of polyline rendering.
+We achieved screen space based base version of polyline rendering.
 Roundings will be covered in the next post.
