@@ -4,6 +4,7 @@ title: "Polyline rendering"
 author: "Shtille"
 categories: journal
 tags: [C++,GLSL,samples]
+image: polyline-basic.png
 ---
 
 ## Overview
@@ -294,5 +295,7 @@ void main()
 
 ## Conclusion
 
+<img src="{{ '/assets/img/polyline-basic.png' | relative_url }}">
+
 We achieved screen space based base version of polyline rendering.
-Roundings will be covered in the next post.
+Roundings will be covered in the [next post]({{ 'polyline-rendering-2' | relative_url }}).
