@@ -51,7 +51,7 @@ Finally, we put values from $\eqref{1}$ into $\eqref{2}$:
 $$
 \begin{cases}
 u`=(u{^1/_2}+{^1/_2})(l+w+w)-w \\
-v`=u*w
+v`=vw
 \end{cases} \tag{3}\label{3}
 $$
 
