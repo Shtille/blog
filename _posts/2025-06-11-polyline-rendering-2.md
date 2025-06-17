@@ -9,8 +9,11 @@ image: polyline-rounded.png
 
 ## Overview
 
-In the [previous article]({{ 'polyline-rendering' | relative_url }}) I created a screen space invariant width polyline rendering.
-Now we need to add rounding to segments. The easiest way to achieve that is to discard pixels far than halfwidth radius distance from segment points.
+In the [previous post]({{ 'polyline-rendering' | relative_url }}) I created a screen space invariant width polyline rendering. Now we need to add rounding to segments.
+
+## Implementation
+
+The easiest way to achieve rounding to segments is to discard pixels far than halfwidth radius distance from segment points.
 
 ### Coordinates transformation
 
@@ -161,4 +164,4 @@ void main()
 <img src="{{ '/assets/img/polyline-rounded.png' | relative_url }}">
 
 We achieved polyline rendering with rounded joins.
-Polyline rendering with different caps on sides will be covered in the next post.
+Polyline rendering with different caps on sides will be covered in the [next post]({{ 'polyline-rendering-3' | relative_url }}).

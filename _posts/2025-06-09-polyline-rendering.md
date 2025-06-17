@@ -9,7 +9,13 @@ image: polyline-basic.png
 
 ## Overview
 
-At work I was given a task to render a polyline.
+At work I was given a task to render a polyline with screen space invariant width. This includes following steps:
+
+1. [x] Render polyline with simple quads (this post).
+2. [x] Render polyline with rounded joins ([second post]({{ 'polyline-rendering-2' | relative_url }})).
+3. [x] Render polyline with different caps on sides ([third post]({{ 'polyline-rendering-3' | relative_url }})).
+4. [ ] Render polyline with different join styles.
+5. [ ] Render polyline with dash pattern.
 
 ## Standard way
 
@@ -109,6 +115,18 @@ d_2 = (P_2 - P_1) + (P_2 - P_2) = P_2 - P_1 \\
 d_3 = (P_2 - P_1) + (P_2 - P_2) = P_2 - P_1
 \end{cases}
 $$
+
+### Vertex layout
+
+Vertex layout is following:
+
+```cpp
+struct alignas(4) Vertex
+{
+    Point3DF position; // vec3
+    PointF texcoord;   // vec2
+};
+```
 
 ### Data creation code
 
