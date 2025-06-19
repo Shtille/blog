@@ -19,8 +19,8 @@ Let's define point type $T$ as:
 $$
 T =
 \begin{cases}
--1\quad\text{if begin point}
-1\quad\text{if end point}
+-1\quad\text{if begin point} \\
+1\quad\text{if end point} \\
 0\quad\text{if join point}
 \end{cases} \tag{1}\label{1}
 $$
