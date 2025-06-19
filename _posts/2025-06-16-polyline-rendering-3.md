@@ -290,4 +290,4 @@ void main()
 <img src="{{ '/assets/img/polyline-caps.png' | relative_url }}">
 
 We achieved polyline rendering with different caps.
-Polyline rendering with different join styles will be covered in the next post.
+Optimized version will be covered in the [next post]({{ 'polyline-rendering-3-2' | relative_url }}).
