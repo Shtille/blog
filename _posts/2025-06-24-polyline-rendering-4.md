@@ -50,7 +50,7 @@ Let's define segments directions:
 
 $$
 \begin{cases}
-d_1 = P_1 - P_0
+d_1 = P_1 - P_0 \\
 d_2 = P_2 - P_1
 \end{cases} \tag{1}\label{1}
 $$
@@ -59,7 +59,7 @@ and angles:
 
 $$
 \begin{cases}
-\alpha = \widehat{B_0 M_0 C_0}
+\alpha = \widehat{B_0 M_0 C_0} \\
 \beta = \frac \alpha 2
 \end{cases} \tag{2}\label{2}
 $$
@@ -97,7 +97,7 @@ So there will be following restrictions:
 
 $$
 \begin{cases}
-l \le l_{\max}
+l \le l_{\max} \\
 \alpha \ge \alpha_\min
 \end{cases} \tag{3}\label{3}
 $$
