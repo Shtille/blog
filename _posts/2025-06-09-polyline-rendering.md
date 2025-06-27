@@ -15,7 +15,7 @@ At work I was given a task to render a polyline with screen space invariant widt
 2. [x] Render polyline with rounded joins ([second post]({{ 'polyline-rendering-2' | relative_url }})).
 3. [x] Render polyline with different caps on sides ([third post]({{ 'polyline-rendering-3' | relative_url }})).
 4. [x] Render polyline with different join styles ([fourth post]({{ 'polyline-rendering-4' | relative_url }})).
-5. [ ] Render polyline with dash pattern.
+5. [x] Render polyline with dash pattern ([fifth post]({{ 'polyline-rendering-5' | relative_url }})).
 
 ## Standard way
 
