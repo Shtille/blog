@@ -11,7 +11,7 @@ image: polyline-dashed.png
 
 In the [previous post]({{ 'polyline-rendering-4' | relative_url }}) I implemented version with diffent joins. Now I gonna cover polyline rendering with dash pattern.
 
-## Dash line classification
+### Dash line classification
 
 Let's classify dash patterns.
 
@@ -62,7 +62,7 @@ $$
 (4,2,2,1)
 $$
 
-where odd indices discribe solid parts, even indices - holes, and each value contains number of parts.
+where even indices discribe solid parts, odd indices - holes, and each value contains number of parts.
 
 Now let's introduce the following notations:
 
